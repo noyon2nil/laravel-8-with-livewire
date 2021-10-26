@@ -1,16 +1,11 @@
 <?php
 
 namespace App\Http\Livewire\Admin\Category;
+use App\Http\Livewire\Admin\AdminComponent;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Str;
-use Livewire\Component;
-use Livewire\WithPagination;
 
-
-class Category extends Component
+class Category extends AdminComponent
 {
-    use WithPagination;
-    protected $paginationTheme = 'bootstrap';
     public $state = [];
     public $category;
     public $is_category_update = false;
@@ -35,7 +30,7 @@ class Category extends Component
         return redirect()->back();
 
     }
-    public function edit(Category $category){
+    public function edit(\App\Models\Category $category){
         $this->is_category_update = true;
         $this->category = $category;
         $this->state = $category->toArray();

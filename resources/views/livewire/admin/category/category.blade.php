@@ -46,7 +46,7 @@
                                     <tbody>
                                     @foreach($categories as $key => $category)
                                         <tr>
-                                            <th scope="row">{{ $categories->firstItem() + $key   }}</th>
+                                            <th scope="row">{{ $categories->firstItem() + $key }}</th>
                                             <td>{{ $category->name }}</td>
                                             <td>{{ $category->created_at }}</td>
                                             @if($category->status == 0)

@@ -2,19 +2,14 @@
 
 namespace App\Http\Livewire\Admin\SubCategory;
 
-
+use App\Http\Livewire\Admin\AdminComponent;
 use App\Models\Category;
 use App\Models\SubCategory;
 use Illuminate\Support\Facades\Validator;
-use Livewire\Component;
-use Livewire\WithPagination;
 
-
-class ListSubCategory extends Component
+class ListSubCategory extends AdminComponent
 {
-    use WithPagination;
     public $select;
-    protected $paginationTheme = 'bootstrap';
     public $state =[];
     public $sub_category;
     public $sub_category_update = false;

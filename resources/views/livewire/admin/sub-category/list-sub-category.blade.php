@@ -49,10 +49,10 @@
                                         <tbody>
                                         @foreach($sub_categories as $key=> $sub_category)
                                             <tr>
-                                                <th scope="row">{{ $sub_categories->firstItem() + $key   }}</th>
+                                                <th scope="row">{{ $sub_categories->firstItem() + $key }}</th>
                                                 <td>{{ $sub_category->name }}</td>
 
-                                                <td>{{$sub_category->category_info }}</td>
+                                                <td>{{$sub_category->category_info ? $sub_category->category_info->name : '' }}</td>
                                                 <td>{{ $sub_category->created_at }}</td>
 
                                                 @if($sub_category->status == 0)

@@ -6,23 +6,26 @@
     <title>Laravel 8 with livewire learn</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('backend/')}}/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('backend/')}}/dist/css/adminlte.min.css">
+    <!-- Toaster -->
+    <link rel="stylesheet" href="{{ asset('backend/')}}/plugins/toastr/toastr.css">
     @stack('css')
     @livewireStyles
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-    <x-top-bar />
+    <x-top-bar/>
 
-    <x-side-bar />
+    <x-side-bar/>
 
-        {{ $slot }}
+{{ $slot }}
 
-    <!-- Control Sidebar -->
+<!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
         <div class="p-3">
@@ -31,7 +34,7 @@
         </div>
     </aside>
     <!-- /.control-sidebar -->
-    <x-footer />
+    <x-footer/>
 
 </div>
 <!-- ./wrapper -->
@@ -44,6 +47,10 @@
 <script src="{{ asset('backend/')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('backend/')}}/dist/js/adminlte.min.js"></script>
+<!-- Toaster -->
+<script src="{{ asset('backend/')}}/plugins/toastr/toastr.min.js"></script>
+<!-- Sweetalert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @stack('js')
 @livewireScripts
 </body>
